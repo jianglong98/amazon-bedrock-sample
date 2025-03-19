@@ -40,10 +40,14 @@ To keep your fork up to date with the original (upstream) repository, follow the
 
 # To push your local changes to the GitHub remote repository, follow these steps:
 
-**Add and Commit Your Changes**
-git add SYNC_WITH_UPSTREAM.md
-git commit -m "Update SYNC_WITH_UPSTREAM.md with untracked files check"
-**Push to Your GitHub Repository**
-git push origin main
+7. **Add and Commit Your Changes**
+   ```bash
+   git add SYNC_WITH_UPSTREAM.md
+   git commit -m "Update SYNC_WITH_UPSTREAM.md with untracked files check"
+   ```
+8. **Push to Your GitHub Repository**
+   ```bash
+   git push origin main
+   ```
 
 ## This will push your committed changes to the main branch of your remote repository on GitHub.
