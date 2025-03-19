@@ -1,0 +1,218 @@
+# Project
+site_name: Amazon Bedrock Recipes
+copyright: Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+site_author: Bedrock-GTM
+site_description: Amazon Bedrock cookbook website
+# Repository
+repo_name: "Github: Amazon-Bedrock-Samples"
+repo_url: "https://github.com/aws-samples/amazon-bedrock-samples/tree/main"
+# Plugins
+plugins:
+  - tags:
+      # tags_hierarchy: true
+      tags_file: 'general/tags.md'
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  - tags:
+      tags: false
+      tags_allowed:
+        - Agents
+        - Multi-Agent-Collaboration 
+        - Knowledge-Bases
+        - RAG
+        - Prompt-Engineering
+        - Langchain
+        - LlamaIndex
+        - Evaluation
+        - Embedding
+        - Batch-Inference
+        - Fine-Tuning
+        - Custom-Model-Import
+        - LLM-as-Judge
+        - Responsible-AI
+        - Guardrails
+# # extras and additional configuration
+extra:
+  generator: false
+  tags:
+    Compatibility: compat
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aws-samples/amazon-bedrock-samples/tree/main
+  analytics: 
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            <a href="https://github.com/aws-samples/amazon-bedrock-samples/issues/new?title=[Online Feedback]: Short-Summary-of-Issue&body=Page URL: {url}" target="_blank" rel="noopener">creating an issue</a>.
+
+extra_javascript:
+  - javascript/feedback.js
+
+# Theme
+theme:
+  name: material
+  logo: logo.png
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon: 
+    repo: fontawesome/brands/git-alt
+  features:
+    - tags
+    - toc.integrate
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - navigation.footer
+    # - navigation.sections
+    # - navigation.tabs
+    - search.highlight
+    - search.suggest
+  language: en
+  palette:
+    - scheme: default
+      primary: white
+      accent: purple 
+  favicon: assets/favicon.png
+  
+# Extensions 
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.superfences
+  - def_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.mark
+
+# Website Page Tree
+nav:
+  - Home: 'index.md'
+  # - Get Started: 'general/get-started.md'
+  - Features:
+    - Intro to Amazon Bedrock:
+      - API Usage: 
+        - Invoke Model API Example : './introduction-to-bedrock/bedrock_apis/01_invoke_api.md'
+        - Agents API Example: './introduction-to-bedrock/bedrock_apis/04_agents_api.md'
+        - Knowledge Bases API Example: './introduction-to-bedrock/bedrock_apis/03_knowledgebases_api.md'
+        - Guardrail API Example: './introduction-to-bedrock/bedrock_apis/02_guardrails_api.md'
+        - Converse API Example: './introduction-to-bedrock/converse_api/01_converse_api.md'
+    - Agents:
+      - Amazon Bedrock Agents:
+        - How to create an Agent: './agents-and-function-calling/introduction-to-agents/how_to_create_custom_agents.md'
+        - Bedrock Agent Features:
+          - Create Agent with Function Definition: './agents-and-function-calling/bedrock-agents/features-examples/01-create-agent-with-function-definition/01-create-agent-with-function-definition.md'
+          - Create Agent with API Schema: './agents-and-function-calling/bedrock-agents/features-examples/02-create-agent-with-api-schema/02-create-agent-with-api-schema.md'
+          - Create Agent with Return of Control: './agents-and-function-calling/bedrock-agents/features-examples/03-create-agent-with-return-of-control/03-create-agent-with-return-of-control.md'
+          - Create Agent with Single Knowledge Base: './agents-and-function-calling/bedrock-agents/features-examples/04-create-agent-with-single-knowledge-base/04-create-agent-with-single-knowledge-base.md'
+          - Create Agent with Knowledge Base and Action Group: './agents-and-function-calling/bedrock-agents/features-examples/05-create-agent-with-knowledge-base-and-action-group/05-create-agent-with-knowledge-base-and-action-group.md'
+          - Prompt and Session Attributes: './agents-and-function-calling/bedrock-agents/features-examples/06-prompt-and-session-attributes/06-prompt-and-session-attributes.md'
+          - Custom Prompt and Lambda Parsers: './agents-and-function-calling/bedrock-agents/features-examples/07-advanced-prompts-and-custom-parsers/07-custom-prompt-and-lambda-parsers.md'
+          - Create Agent with Guardrails: './agents-and-function-calling/bedrock-agents/features-examples/08-create-agent-with-guardrails/08-create-agent-with-guardrails.md'
+          - Create Agent with Memory: './agents-and-function-calling/bedrock-agents/features-examples/09-create-agent-with-memory/09-create-agent-with-memory.md'
+          - Create Agent with Code Interpreter: './agents-and-function-calling/bedrock-agents/features-examples/10-create-agent-with-code-interpreter/10-create-agent-with-code-interpreter.md'
+          - Create Agent with Custom Orchestration: './agents-and-function-calling/bedrock-agents/features-examples/14-create-agent-with-custom-orchestration/custom_orchestration_example.md'
+          - Create Dynamic Tooling Inline Agents: './agents-and-function-calling/bedrock-agents/features-examples/15-invoke-inline-agents/inline-agent-api-usage.md'
+        - Bedrock Flows:
+          - Getting Started with Prompt Management Flows: './agents-and-function-calling/bedrock-agents/bedrock-flows/Getting_started_with_Prompt_Management_Flows.md'
+        - Use Case Examples:
+          - Text to SQL Agent: './agents-and-function-calling/bedrock-agents/use-case-examples/text-2-sql-agent/create_and_invoke_sql_agent.md'
+          - Retail Agent Workshop: './agents-and-function-calling/bedrock-agents/use-case-examples/agentsforbedrock-retailagent/workshop/test_retailagent_agentsforbedrock.md'
+          - Product Review Agent: './agents-and-function-calling/bedrock-agents/use-case-examples/product-review-agent/main.md'
+      - Function Calling:
+        - Function Calling with Converse: './agents-and-function-calling/function-calling/function_calling_with_converse/function_calling_with_converse.md'
+        - Function Calling with Invoke: './agents-and-function-calling/function-calling//function_calling_with_invoke/function_calling_model_with_invoke.md'
+        - Return of Control: './agents-and-function-calling/function-calling/return_of_control/return_of_control.md'
+        - Tool Binding: './agents-and-function-calling/function-calling/tool_binding/tool_bindings.md'
+      - Open Source:
+        - CrewAI:
+            - Find Dream Destination with CrewAI: './agents-and-function-calling/open-source-agents/crew.ai/Find dream destination with CrewAI.md'
+        - LangGraph:
+          - LangGraph Agent with Function Calling: './agents-and-function-calling/open-source-agents/langgraph/langgraph-single-agent.md'
+          - LangGraph Multi-Modal Agent with Function Calling: './agents-and-function-calling/open-source-agents/langgraph/langgraph-agents-multimodal.md'
+          - LangGraph Multi Agent Orchestration: './agents-and-function-calling/open-source-agents/langgraph/langgraph-multi-agent-sql-tools.md'
+          - LangGraph Multi Agent For Medical Chatbot: './agents-and-function-calling/open-source-agents/langgraph/02_medibot_V3_agents.md'
+          - LangGraph Fact Checker with Multi Agent: './agents-and-function-calling/open-source-agents/langgraph/langgraph-fact-checker-feedback-loop.md'
+          - LangGraph Multi Agent With SQL tools: './agents-and-function-calling/open-source-agents/langgraph/langgraph-multi-agent-sql-tools.md'
+          - LangGraph Multi Agent with tools: './agents-and-function-calling/open-source-agents/langgraph/03_langgraph_agents_of_agent.md'
+          - Managing Memory for Multi Agents: './agents-and-function-calling/open-source-agents/langgraph/Travel_planner_with_langgraph.md'
+        - Multi Agent:
+          - Multi Agent Orchestration: './agents-and-function-calling/introduction-to-agents/how_to_create_multi_agents_from_custom_agents.md'
+    - RAG:
+      - Amazon Bedrock Knowledge Bases:
+        - Zero Setup:
+          - Chat with Your Document: './rag/knowledge-bases/features-examples/00-zero-setup-chat-with-your-document/chat_with_document_kb.md'
+        - RAG Concepts:
+          - Create and Ingest Documents with Multi-Data Sources: './rag/knowledge-bases/features-examples/01-rag-concepts/01_create_ingest_documents_test_kb_multi_ds.md'
+          - Managed RAG with Custom Prompting: './rag/knowledge-bases/features-examples/01-rag-concepts/02_managed_rag_custom_prompting_and_no_of_results.md'
+          - Customized RAG with Claude 3 and Langchain: './rag/knowledge-bases/features-examples/01-rag-concepts/03_customized-rag-retreive-api-hybrid-search-claude-3-sonnet-langchain.md'
+          - RAG Evaluation with Langchain and RAGAS: './rag/knowledge-bases/features-examples/01-rag-concepts/04_customized-rag-retreive-api-langchain-claude-evaluation-ragas.md'
+        - Optimizing Retrieval Results:
+          - Advanced Chunking Options: './rag/knowledge-bases/features-examples/02-optimizing-accuracy-retrieved-results/advanced_chunking_options.md'
+          - CSV Metadata Customization: './rag/knowledge-bases/features-examples/02-optimizing-accuracy-retrieved-results/csv_metadata_customization.md'
+          - Query Reformulation: './rag/knowledge-bases/features-examples/02-optimizing-accuracy-retrieved-results/query_reformulation.md'
+        - Advanced Concepts:
+          - Dynamic Metadata Filtering: './rag/knowledge-bases/features-examples/03-advanced-concepts/dynamic-metadata-filtering/dynamic-metadata-filtering-KB.md'
+          - Reranking:
+            - Deploy Reranking Model: './rag/knowledge-bases/features-examples/03-advanced-concepts/reranking/01_deploy-reranking-model-sm.md'
+            - Knowledge Base Reranker: './rag/knowledge-bases/features-examples/03-advanced-concepts/reranking/02_kb-reranker.md'
+            - QA Generator: './rag/knowledge-bases/features-examples/03-advanced-concepts/reranking/qa-generator.md'
+        - Responsible AI:
+          - Contextual Grounding: './rag/knowledge-bases/features-examples/05-responsible-ai/contextual-grounding.md'
+        - Use Case Examples:
+          - Metadata Filter Access Control:
+            - End-to-End ACL with Knowledge Base: './rag/knowledge-bases/use-case-examples/metadata-filter-access-control/kb-end-to-end-acl.md'
+          - RAG with Structured and Unstructured Data:
+            - Create Dummy Structured Data: './rag/knowledge-bases/use-case-examples/rag-using-structured-unstructured-data/0-create-dummy-structured-data.md'
+            - Create SQL Dataset (Optional): './rag/knowledge-bases/use-case-examples/rag-using-structured-unstructured-data/1_create_sql_dataset_optional.md'
+            - RAG with Structured and Unstructured Data: './rag/knowledge-bases/use-case-examples/rag-using-structured-unstructured-data/2_rag_with_structured_unstructured_data.md'
+      - Open Source:
+        - Chatbot using Langchain: './rag/open-source/chatbots/qa_chatbot_langchain_bedrock.md'
+        - Chunking strategies for RAG applications: './rag/open-source/chunking/rag_chunking_strategies_langchain_bedrock.md'
+        - Vector Stores:
+          - Langchain Chatbot with Opensearch: './rag/open-source/vector_stores/rag_langchain_bedrock_opensearch.md'
+    - Model Customization:
+      - Model Distillation with Invocation Logs: './custom-models/model-distillation/Historical_invocation_distillation.md'
+      - Model Distillation with S3 Data: './custom-models/model-distillation/Distillation-via-S3-input.md'
+  - Gen AI Usecases:
+    - Text Generation:
+      - Streaming Response with Converse: './genai-use-cases/text-generation/how_to_work_with_text_generation_w_bedrock.md'
+      - Generate Python Code with Converse: './genai-use-cases/text-generation/how_to_work_with_code_generation_w_bedrock.md'
+      # - Entity Extraction: './genai-use-cases/text-generation/how_to_work_with_entity_extraction_w_bedrock.md'
+      - Text Translation with Converse:  './genai-use-cases/text-generation/how_to_work_with_text_translation_w_bedrock.md'
+      - Text summarization with Converse:  './genai-use-cases/text-generation/how_to_work_with_text-summarization-titan+claude.md'
+      - Generate Bulk Emails with Batch Inference:  './genai-use-cases/text-generation/how_to_work_with_batch_example_for_multi_threaded_invocation.md'
+    # - Governance: 'general/license.md'
+    # - Observability: 'general/license.md'
+    # - Data access control: 'general/license.md'
+  - Workshops:
+    - Open-source L400:
+      - Introduction to the Use Case: './workshop/open-source-l400/01_usecase_introduction.md'
+      - Advanced RAG for Agents: './workshop/open-source-l400/02_Lab_Find a Dream Destination_RAG query.md'
+      - Conversational Memory in Agents: './workshop/open-source-l400/02_travel_planner_with_langgraph.md' 
+      - Multi-Modal and Types of Agents: './workshop/open-source-l400/03_travel_agent_with_tools.md'
+      - Multi-Agent Collaboration with Human-in-loop: './workshop/open-source-l400/04_travel_booking_multi_agent.md'
+      - Find Dream Destination with CrewAI: './workshop/open-source-l400/05_dream_destination_with_crewai.md'
+      - RAGAs Agents Evaluation: './workshop/open-source-l400/06_agent_evaluation_with_ragas.md'
+      - Dynamic Tool invocation: './workshop/open-source-l400/07_dynamic_tooling_agents.md'
+    - Open-source L200:
+      - Introduction to the Use Case: './workshop/open-source-l200/02_contextual_text_generation.md'
+      - Retrieval Based Text Generation: './workshop/open-source-l200/03_retrieval_based_text_application.md'
+      - Retrieval Based Chat Application: './workshop/open-source-l200/04_retrieval_based_chat_application.md'
+      - Agent Based Text Generation: './workshop/open-source-l200/05_agent_based_text_generation.md'
+  - Tags: 'general/tags.md'
+  - License: 'general/license.md'
